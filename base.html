@@ -2,22 +2,131 @@
 <html lang="en">
     <head>
         <title>lo-fi</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles.css">
         <link href="https://fonts.cdnfonts.com/css/proggy-clean" rel="stylesheet">
-    </head>
-    
+        <link href="fontawesome-free-6.2.1-web\css\fontawesome.css" rel="stylesheet">
+        <link href="fontawesome-free-6.2.1-web\css\brands.css" rel="stylesheet"> 
+        <link href="fontawesome-free-6.2.1-web\css\solid.css " rel="stylesheet"> 
+          
     <body>
-        <div class = header>
-            <nav class="navbar">
+    
+        <div class = "header">
+            <nav>
                 <ul>
-                    <div class="logo">lo-fi society</div>
-                    <div class="pages">
-                        <li><a href="pomodoro.html">Pomodoro</a></li>
-                        <li><a href="mixtape.html">Mixtape</a></li>
-                    </div>
-                    
+                        <div class ="mobile_nav" id = "my_links"">
+                            <li id = "header_title">lo-fi society</li>
+                            <li><a href="base.html">Homepage</a></li>
+                            <li><a href="pomodoro.html">Pomodoro</a></li>
+                            <li><a href="mixtape.html">Mixtape</a></li>
+                            <li><a href="visual.html">Visual Novel</a></li>
+                            <a href="javascript:void(0);" class="icon" onclick="show_links()">
+                                <i class="fa-solid fa-bars"></i>
+                            </a>
+                        </div>
+                        
+                        
                 </ul>
+                
             </nav>
-        </div>
+        </div>    
+            
+        <script>
+            function show_links() {
+                var x = document.getElementById("my_links");
+                if (x.className === "mobile_nav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "mobile_nav";
+                }
+            }
+        </script>
+
+        <section id="about_section">
+            <div class="about_container">
+                <div class= "headings_item_about">
+                    <h1>About Us</h1>
+                </div>
+
+                <div class="lofi_chan_item">
+                    <img src="Lofi-Chan_Sprite_joy.PNG" alt="lo-fi Chan">
+                </div>
+                <div class="text_item_about">
+                    <p>
+                    Lorem ipsum dolor sit amet. Sit quae delectus et laudantium sapiente ut <br> 
+                    nemo porro aut rerum dolorum sit nihil pariatur et veritatis temporibus <br>
+                    33 nihil fugiat. 
+                    Lorem ipsum dolor sit amet. Sit quae delectus et laudantium sapiente ut <br> 
+                    nemo porro aut rerum dolorum sit nihil pariatur et veritatis temporibus <br>
+                    33 nihil fugiat. 
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+
+        <section id="events_section">
+            <div class="events_container">
+                <div class= "headings_item_events event_grid_items">
+                    <h1>Past Events</h1>
+                  
+                </div>
+                <div class = "event_grid_items">
+                    <button class = "left_button button" onclick="on_click(-1)">&#8249;</button>
+                    <img class = "slide_images" src = "karaoke.png">
+                    <img class = "slide_images" src = "lan.png">
+                    <img class = "slide_images" src = "movie_night.png">
+                    <button class = "right_button button" onclick="on_click(1)">&#8250;</button>
+                    
+                </div>
+                
+            </div>
+
+            <script>
+                var index = 1;
+                show_image(index);
+                
+                function on_click(num) {
+                    show_image(index += num)
+                }
+                function show_image(num) {
+                    var i;
+                    var j = document.getElementsByClassName("slide_images");
+                    if (num > j.length) {
+                        index = 1;
+                    }
+
+                    if (num < 1) {
+                        index = j.length
+                    }
+
+                    for (i = 0; i < j.length; i++) {
+                        j[i].style.display = "none";
+                    }
+
+                    j[index - 1].style.display = "block";
+                }
+            </script>
+        </section>
+
+        <section id="socials_section">
+
+            <div class = "bottom_nav">
+                <ul>    
+                    <li class = "social_header">
+                        <h1>Socials</h1>
+                    </li>
+                    
+                    <li>
+                        <a href="https://discord.com/invite/84YRm5R56E" class="fa-brands fa-discord"></a>
+                        <a href="https://www.instagram.com/unsw.lofi/" class="fa-brands fa-instagram"></a>
+                        <a href=" https://www.facebook.com/unswlofisoc/" class="fa-brands fa-facebook"></a>
+                        <a href="https://www.youtube.com/channel/UCxGMlT2u_SqddMwRbeyWugQ" class="fa-brands fa-youtube"></a>
+                        <a href=" https://soundcloud.com/unsw-lofisoc" class="fa-brands fa-soundcloud"></a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
     </body>
 </html>
