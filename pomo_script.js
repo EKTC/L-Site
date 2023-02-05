@@ -2,7 +2,7 @@ const semicircles = document.querySelectorAll('.semicirle');
 
 // input
 const hr = 0;
-const min = 0;
+const min = 1;
 const sec = 0;
 
 // convert to milliseconds
@@ -21,6 +21,7 @@ function countDownTimer() {
     const remainingTime = futureTime - currentTime;
     const angle = (remainingTime / setTime) * 360;
 
+    // progress indicator
     if (angle > 180) {
         semicircles[2].style.display = 'none';
         semicircles[0].style.transform = 'rotate(180deg)';
@@ -31,4 +32,32 @@ function countDownTimer() {
         semicircles[1].style.transform = 'rotate($(angle)deg)';
     }
 
+    // timer
+    const hrs = Math.floor((remainingTime / (1000 * 60 * 60)) % 24);
+    const mins = Math.floor((remainingTime / (1000 * 60)) % 60);
+    const secs = Math.floor((remainingTime / 1000) % 60);
+    
+    timerLoop.innerHTML = `
+    <div>${hrs}</div>
+    <div class="colon">:</div>
+    <div>${mins}</div>
+    <div>:<div>
+    <div>${secs}</div>
+    `;
+
+    // end
+    if (remainingTime < 0) {
+        clearInterval(timerLoop)
+        semicircles[0].style.display = 'none';
+        semicircles[1].style.display = 'none';
+        semicircles[2].style.display = 'none';
+
+        timerLoop.innerHTML = `
+        <div>00</div>
+        <div class="colon">:</div>
+        <div>00}</div>
+        <div>:<div>
+        <div>00</div>
+        `;
+    }
 }

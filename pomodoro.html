@@ -2,33 +2,58 @@
 <html lang="en">
     <head>
         <title>lo-fi</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles.css">
         <link href="https://fonts.cdnfonts.com/css/proggy-clean" rel="stylesheet">
+        <link href="fontawesome-free-6.2.1-web\css\fontawesome.css" rel="stylesheet">
+        <link href="fontawesome-free-6.2.1-web\css\brands.css" rel="stylesheet"> 
+        <link href="fontawesome-free-6.2.1-web\css\solid.css " rel="stylesheet">
     </head>
     
     <body>
-        <div class = header>
-            <nav class="navbar">
+        <div class = "header">
+            <nav>
                 <ul>
-                    <div class="logo">lo-fi society</div>
-                    <div class="pages">
-                        <li><a href="base.html">Homepage</a></li>
-                        <li><a href="mixtape.html">Mixtape</a></li>
-                    </div>
-                    
+                        <div class ="mobile_nav" id = "my_links"">
+                            <li id = "header_title">lo-fi society</li>
+                            <li><a href="base.html">Homepage</a></li>
+                            <li><a href="pomodoro.html">Pomodoro</a></li>
+                            <li><a href="mixtape.html">Mixtape</a></li>
+                            <li><a href="visual.html">Visual Novel</a></li>
+                            <a href="javascript:void(0);" class="icon" onclick="show_links()">
+                                <i class="fa-solid fa-bars"></i>
+                            </a>
+                        </div>
+                        
+                        
                 </ul>
+                
             </nav>
-        </div>
+        </div>    
+            
+        <script>
+            function show_links() {
+                var x = document.getElementById("my_links");
+                if (x.className === "mobile_nav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "mobile_nav";
+                }
+            }
+        </script>
         <div class ="pomo_container center"> <!--center class makes sure all the elements in the container is center-->
             <!--progress indicator-->
-            <div class"circle_container center>
+            <div class="circle_container center">
                 <div class ="semicircle"></div>
                 <div class ="semicircle"></div>
                 <div class ="semicircle"></div>
                 <div class ="outermost_circle"><div>
             </div>
             <!--timer-->
-
-            <script src"pomo_script.js"></script>
+            <div class="timer_container center">
+                <div class=""timer center"></div>
+            </div>
+        </div>
+        <script src"pomo_script.js"></script>
     </body>
 </html>
