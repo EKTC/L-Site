@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>lo-fi</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.cdnfonts.com/css/proggy-clean" rel="stylesheet">
+        <link href="fontawesome-free-6.2.1-web\css\fontawesome.css" rel="stylesheet">
+        <link href="fontawesome-free-6.2.1-web\css\brands.css" rel="stylesheet"> 
+        <link href="fontawesome-free-6.2.1-web\css\solid.css " rel="stylesheet"> 
+          
+    <body>
+        <div class = "header">
+            <div class ="logo">lo-fi society</div>
+            <nav class = "mobile_nav">
+                    <div id = "icon" onclick= "toggle()">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </div>
+                    <div class ="nav_links hide" id = "dropdown">
+                        <ul class = "layerer">
+                            <li><a href="index.html">Homepage</a></li>
+                            <li><a href="pomodoro.html">Pomodoro</a></li>
+                            <li><a href="mixtape.html">Mixtape</a></li>
+                            <li><a href="visual.html">Visual Novel</a></li>
+                        </ul>
+                        
+
+                    </div>
+    
+            </nav>
+        </div>    
+        <script>
+            function toggle() {
+              var x = document.getElementById("dropdown");
+                if (x.style.display === "none") {
+                    x.style.display = "flex";
+                } else {
+                x.style.display = "none";
+              }
+            }
+        </script>
+        <section id = "vn_section">
+            <h1 class = "vn_about">VISUAL NOVEL</h1>
+            <p class = "vn_text">
+                The visual novel was a major project done in 2021
+                in collaboration with another society AUNSW.
+                There are two routes based on our mascots. Files below.
+            </p>
+           
+            <div class = "vn_text">
+                <a href="https://drive.google.com/file/d/1uM6ri_GZhNWY73OsPzPXsxOYoCRbz6QY/view">PC Download</a>
+                <a href="https://drive.google.com/file/d/16ZK-wGHNft0YSTWfgsoE6cIeGYXI7Fjm/view">Mac Download</a>
+            </div>
+            <img class = "vn_image" src = "images\vn.png">
+        </section>
+    </body>
+</html>

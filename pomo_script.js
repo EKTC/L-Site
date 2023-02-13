@@ -47,6 +47,11 @@ function countDownTimer() {
     <div>${secs}</div>
     `;
 
+    if(remainingTime <= 12000) {
+        semicircles[0].style.backgroundColor = "red";
+        semicircles[1].style.backgroundColor = "red";
+        timer.style.color = "red";
+    }
     // end
     if (remainingTime < 0) {
         clearInterval(timerLoop);
@@ -61,5 +66,7 @@ function countDownTimer() {
         <div>:<div>
         <div>00</div>
         `;
+
+        timer.style.color = "lightgray";
     }
 }

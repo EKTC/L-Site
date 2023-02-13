@@ -91,6 +91,17 @@
     .layerer {
         display: flex;
     }
+
+    .fa-brands {
+
+        padding: 30px;
+        font-size: 25px;
+        width: 30px;
+        text-align: center;
+        text-decoration: none;
+        margin: 2px 2px;
+        border-radius: 50%;
+    }
 }
 
 
@@ -203,6 +214,21 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         right: 0px;
        
     }
+
+    .fa-brands {
+
+        padding: 10px;
+        font-size: 10px;
+        width: 15px;
+        text-align: center;
+        text-decoration: none;
+        margin: 5px 2px;
+        border-radius: 50%;
+    }
+
+    .pomo_sizer {
+        transform: scale(0.4);
+    }
 }
 
 
@@ -292,16 +318,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
     overflow: hidden;
 }
 
-.fa-brands {
 
-    padding: 10px;
-    font-size: 10px;
-    width: 15px;
-    text-align: center;
-    text-decoration: none;
-    margin: 5px 2px;
-    border-radius: 50%;
-}
 
 .fa-brands:hover {
     opacity: 0.7;
@@ -332,15 +349,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
     color: white;
 }
 
-
-
-
-
 #about_section {
     width: 100%;
     height: 30%;
     background: rgb(182, 190, 246);
-    /* background: radial-gradient(circle, rgba(255,224,238,1) 0%, rgba(255,255,255,1) 100%); */
 }
 
 #events_section {
@@ -356,7 +368,82 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
     height: auto;
 }
 
+#mixtape_section {
+    width: 100%;
+    height: 100%;
+    background: rgb(111, 117, 205);
+}
 
+#vn_section {
+    width: 100%;
+    height: 100vh;
+    background: rgb(111, 117, 205);
+    background-size:cover
+}
+
+.vn_about {
+    color: #fefefe;;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.vn_image {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    object-fit:contain;
+    max-width:80%;
+    max-height:40%;
+}
+.vn_text {
+    color: #fefefe;;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.vn_text > a {
+    color: #fefefe;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+.vn_text > a:hover {
+    background-size: contain;
+    background-color: #280050;
+}
+.mixtape_year {
+    color: #fefefe;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.mixtape_about {
+    color: #fefefe;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    position: block;
+}
+
+iframe {
+    width: 50%;
+    height: 50vh;
+    display: flex;
+    margin: auto;
+    border-radius: 0;
+    border-style: none;
+}
 /* For Pomo html file */
 #pomo_timer {
     text-align: center;
@@ -385,6 +472,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
     position: absolute;
     overflow: hidden;
     z-index: 1;
+  
 }
 
 .semicircle {
@@ -447,6 +535,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
     justify-content: center;
     align-items: center;
     margin: 0 10px 0 10px;
+    color: #475181;
 }
 
 .timer .colon {
