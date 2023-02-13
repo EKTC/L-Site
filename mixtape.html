@@ -2,23 +2,47 @@
 <html lang="en">
     <head>
         <title>lo-fi</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles.css">
         <link href="https://fonts.cdnfonts.com/css/proggy-clean" rel="stylesheet">
+        <link href="fontawesome-free-6.2.1-web\css\fontawesome.css" rel="stylesheet">
+        <link href="fontawesome-free-6.2.1-web\css\brands.css" rel="stylesheet"> 
+        <link href="fontawesome-free-6.2.1-web\css\solid.css " rel="stylesheet"> 
     </head>
     
     <body>
-            <div class = header>
-                <nav class="navbar">
-                    <ul>
-                        <div class="logo">lo-fi society</div>
-                        <div class="pages">
+        <div class = "header">
+            <div class ="logo">lo-fi society</div>
+            <nav class = "mobile_nav">
+                    <div id = "icon" onclick= "toggle()">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </div>
+                    <div class ="nav_links hide" id = "dropdown">
+                        <ul class = "layerer">
+                            <li><a href="index.html">Homepage</a></li>
                             <li><a href="pomodoro.html">Pomodoro</a></li>
-                            <li><a href="base.html">Homepage</a></li>
-                        </div>
+                            <li><a href="mixtape.html">Mixtape</a></li>
+                            <li><a href="visual.html">Visual Novel</a></li>
+                        </ul>
                         
-                    </ul>
-                </nav>
-            </div>
+
+                    </div>
+    
+            </nav>
+        </div>    
+        <script>
+            function toggle() {
+                var x = document.getElementById("dropdown");
+                if (x.style.display === "none") {
+                    x.style.display = "flex";
+                } else {
+                x.style.display = "none";
+                }
+            }
+        </script>
+
         <section>
         <h2>MIXTAPE</h2>
         <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/64uMchMRpm6YMiVwyiVytj?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>

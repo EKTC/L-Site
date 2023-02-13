@@ -7,40 +7,43 @@
         <link href="https://fonts.cdnfonts.com/css/proggy-clean" rel="stylesheet">
         <link href="fontawesome-free-6.2.1-web\css\fontawesome.css" rel="stylesheet">
         <link href="fontawesome-free-6.2.1-web\css\brands.css" rel="stylesheet"> 
-        <link href="fontawesome-free-6.2.1-web\css\solid.css " rel="stylesheet">
+        <link href="fontawesome-free-6.2.1-web\css\solid.css " rel="stylesheet"> 
     </head>
     
     <body>
         <div class = "header">
-            <nav>
-                <ul>
-                        <div class ="mobile_nav" id = "my_links"">
-                            <li id = "header_title">lo-fi society</li>
-                            <li><a href="base.html">Homepage</a></li>
+            <div class ="logo">lo-fi society</div>
+            <nav class = "mobile_nav">
+                    <div id = "icon" onclick= "toggle()">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </div>
+                    <div class ="nav_links hide" id = "dropdown">
+                        <ul class = "layerer">
+                            <li><a href="index.html">Homepage</a></li>
                             <li><a href="pomodoro.html">Pomodoro</a></li>
                             <li><a href="mixtape.html">Mixtape</a></li>
                             <li><a href="visual.html">Visual Novel</a></li>
-                            <a href="javascript:void(0);" class="icon" onclick="show_links()">
-                                <i class="fa-solid fa-bars"></i>
-                            </a>
-                        </div>
+                        </ul>
                         
-                        
-                </ul>
-                
+
+                    </div>
+    
             </nav>
         </div>    
-            
         <script>
-            function show_links() {
-                var x = document.getElementById("my_links");
-                if (x.className === "mobile_nav") {
-                    x.className += " responsive";
+            function toggle() {
+              var x = document.getElementById("dropdown");
+                if (x.style.display === "none") {
+                    x.style.display = "flex";
                 } else {
-                    x.className = "mobile_nav";
-                }
+                x.style.display = "none";
+              }
             }
         </script>
+
+
         <div class ="pomo_container center"> <!--center class makes sure all the elements in the container is center-->
             <!--progress indicator-->
             <div class="circle_container center">
@@ -51,9 +54,10 @@
             </div>
             <!--timer-->
             <div class="timer_container center">
-                <div class=""timer center"></div>
+                <div class="timer center"></div>
             </div>
         </div>
-        <script src"pomo_script.js"></script>
+
+        <script src="pomo_script.js"></script>
     </body>
 </html>

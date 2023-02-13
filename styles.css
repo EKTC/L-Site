@@ -9,49 +9,61 @@
 
 @media only screen and (min-width: 1000px) {
     html {
-        background-color:  #957DAD;
         font-size: 150%;
     }
 
     .header {
-        background-color: #957DAD;
-        text-align: left;
         width: 100%;
-        height: 10%;
+        height: auto;
+        background: linear-gradient(90deg, rgba(118,136,199,1) 0%, rgba(128,102,195,1) 100%);
+        display: flex;
         justify-content: space-between;
-        align-items: center;    
+        align-items: center;  
+    }
+
+    .logo {
+        font-size: 28px;
+        font-weight: bold;
+        color: #fefefe;
+        margin-left: 20px;
+
     }
 
     nav {
-        display: flex;
-        flex-direction: row;
+        /* display: flex; */
+        /* flex-direction: row; */
         list-style-type: none;
     }
 
-    nav > ul{
+    nav >  div{
         margin: 0;
         padding: 0;
         color: #fefefe; 
         overflow: hidden;
         list-style-type: none;
+        text-align: right;
+        float: right;
+        display: flex;
+        
     }
 
-    .header > nav > ul  > div > li {
+    div > nav > div > ul > li {
         font-size: 45px;
-        float: left;
+        display: flex;
         padding: 16px 20px;
+        
     }
-    .header > nav > ul > div > li > a{
+    div > nav > div > ul > li > a{
         font-size: 30px;
         padding: 6px 20px;
-        display: block;
+        display: inline;
         text-decoration: none;
         color: #fefefe;
         cursor: pointer;
         text-align: center;
     }
 
-    .header > nav > ul > div > li > a:hover {
+    div > nav >  div > ul > li > a:hover {
         transform: scale(1.25);
         background-size: contain;
         background-color: #280050;
@@ -62,101 +74,149 @@
     }
 
     .lofi_chan_item > img {
-        max-width: 90%;
-        max-height: 90%;
-    }
-
-   
-}
-
-@media only screen and (max-width: 1000px) {
-    html {
-        background-color:  #957DAD;
-        font-size: 80%;
-    }
-
-    .mobile_nav {
-        margin-left: 0; 
-        width: 100%;
-        overflow: hidden;
-        text-align: left;
-        background-color: #957DAD;
-        text-align: left;
+        max-width: 150%;
+        max-height: 150%;
     }
 
     #header_title {
         color: #fefefe;
         display: flex;
-        justify-content: space-between;
         align-items: center;    
     }
-    .mobile_nav > li > a {
-        float: left;
+
+    .hide {
+        display: flex;
+    }
+
+    .layerer {
+        display: flex;
+    }
+}
+
+
+/* FOR SMALLER SCREENS DONT USE THIS YET 
+
+
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+
+*/
+@media only screen and (max-width: 1000px) {
+
+    /* .logo {
+        font-size: 20px;
+        font-weight: bold;
+        color: #fefefe;
+        margin-left: 20px;
+
+    } */
+    .layerer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+        padding: 10px;
+        /* justify-content: ; */
+    }
+    .mobile_nav {
+        display: flex;
+        background: linear-gradient(90deg, rgba(118,136,199,1) 0%, rgba(128,102,195,1) 100%);
+        justify-content: center;
+        text-align: center;
+        margin: 0;
+        padding-top: 20px;
+    }
+
+    .logo {
+        background: linear-gradient(90deg, rgba(118,136,199,1) 0%, rgba(128,102,195,1) 100%);
+        font-size: 100%;
+        font-weight: bold;
+        color: #fefefe;
+        margin: 0;
+    }
+
+    div > .line {
         display: block;
-        color: #f2f2f2;
-        /* text-align: center; */
-        padding: 10px 20px;
+        width: 1.5rem;
+        height: 0.2rem;
+        margin-bottom: 5px;
+        background-color: #fefefe;
+        cursor: pointer;
+    }
+    span {
+        width: 80%;
+    }
+
+    .nav_links {
+        position: fixed;
+        width: 94%;
+        top: 0.1rem;
+        left: 18px;
+    }
+
+    /* .nav_links > ul > li > a {
+        display: block;
+        text-align: center;
+        
+    } */
+
+    div > nav >  div > ul > li > a:hover {
+        transform: scale(1.5);
+        background-size: contain;
+        background-color: rgba(255, 255, 255, 0.205);
+    }
+    
+    div > nav > div > ul > li > a{
+        padding: 6px 20px;
         text-decoration: none;
-        font-size: 17px;
-      }
-      
-    .mobile_nav > li a:hover {
-        background-color: #ddd;
-        color: black;
-      }
-    
-    .cover {
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-color: #ddd;
+        color: #fefefe;
+        cursor: pointer;
+        text-align: center;
+    }
+
+    div > nav > div > ul > li {
+        font-size: 100%;
+        display: flex;
+        justify-content: center;
+        text-align:center; 
+        flex-direction: column;
+        padding: 10px 10px;
+        
     }
     
-            
-    @media only screen and (max-width: 1000px) {
-        .mobile_nav > li > a {
-            display: none;
-        }
-        .mobile_nav > .icon {
-            color: #fefefe;
-            float: right;
-            display: block;
-            padding-bottom: 10px;
-            padding-right: 10px;
-        }
-    }
-    
-    @media only screen and (max-width: 1000px) {
-        .mobile_nav.responsive {position: relative;}
-        .mobile_nav.responsive .icon {
-            position: absolute;
-            right: 0;
-            top: 0;
-        }
-        .mobile_nav.responsive a {
-            float: none;
-            display: block;
-            text-align: left;
-        }
+    .hide {
+        display: none;
     }
 
     .lofi_chan_item > img {
-        max-width: 80%;
-        max-height: 80%;
+        max-width: 100%;
+        max-height: 100%;
     }   
+
+    #dropdown {
+        position: relative;
+        display: none;
+    }
+
+    #icon {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+       
+    }
 }
 
 
 
 .about_container {
     display: grid;
-    grid-template-columns: 200px auto;
-    margin-left: 20px;
-    grid-auto-rows: 10px 30px auto;
+    grid-template-columns:250px auto;
+    margin-left: 10px;
+    grid-auto-rows: 30px 30px auto;
+    grid-column-gap: 10%;
 
 }
 .headings_item_about {
-    color: #fefefe;
+    color: #475181;
     grid-column: 2;
     grid-row: 2;
 }
@@ -167,8 +227,11 @@
 }
 
 .text_item_about {
+    color: #5c679f;
     grid-column: 2;
     grid-row: 3;
+    font-weight: 600;
+    margin-top: 50px;
 }
 
 .event_container {
@@ -185,7 +248,7 @@
 }
 
 .headings_item_events{
-    color: #fefefe;
+    color: #475181;
 }
 
 .slide_images {
@@ -222,7 +285,7 @@
 }
 
 .bottom_nav {
-    padding-top: 200px;
+    padding-top: 30%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -264,28 +327,33 @@
     color: white;
 }
   
-  .fa-instagram {
+.fa-instagram {
     background: #caacf9;
     color: white;
 }
-  
+
+
+
+
+
 #about_section {
     width: 100%;
     height: 30%;
-    background-color: #D291BC;
+    background: rgb(182, 190, 246);
+    /* background: radial-gradient(circle, rgba(255,224,238,1) 0%, rgba(255,255,255,1) 100%); */
 }
 
 #events_section {
-    background-color: #d3bcf6;
+    background: rgb(227, 230, 255);
     width: 100%;
     height: 30%;
     padding-bottom: 10px;
 }
 
 #socials_section {
-    background-color:#FFDFD3;
+    background: rgb(111, 117, 205);
     width: 100%;
-    height: 30%;
+    height: auto;
 }
 
 
@@ -298,11 +366,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: auto;
+    
 }
 
 .pomo_container {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-color: rgb(230, 198, 230);
 }
 
@@ -328,18 +398,18 @@
 
 .semicircle:nth-child(1) {
     background-color: red;
-    background-color: #088b8b;
+    background-color: rgb(119, 180, 204);
     z-index: 2;
 }
 
 .semicircle:nth-child(2) {
     background-color: blue;
-    background-color: #088b8b;
+    background-color: rgb(119, 180, 204);
     z-index: 3;
 }
 
 .semicircle:nth-child(3) {
-    background-color: white;
+    /* background-color: white; */
     background-color: #ddd;
     z-index: 4;
     /* display: none */
@@ -348,7 +418,6 @@
 .outermost_circle {
     width: 390px;
     height: 390px;
-    background-color: black;
     background-color: white;
     border-radius: 50%;
     z-index: 5;
@@ -358,12 +427,14 @@
     width: 330px;
     height: 200px;
     z-index: 6;
+    
 }
 
 .timer {
     width: 400px;
     height: 100px;
     z-index: 7;
+    margin-top: 40%;
 }
 
 /* for each timer element */
@@ -377,4 +448,13 @@
     align-items: center;
     margin: 0 10px 0 10px;
 }
+
+.timer .colon {
+    background-color: transparent;
+    width: 10px;
+    margin-left: 0;
+    margin-right: 0;
+    padding-bottom: 15px;
+}
+
 

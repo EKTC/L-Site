@@ -10,37 +10,38 @@
         <link href="fontawesome-free-6.2.1-web\css\solid.css " rel="stylesheet"> 
           
     <body>
-    
         <div class = "header">
-            <nav>
-                <ul>
-                        <div class ="mobile_nav" id = "my_links"">
-                            <li id = "header_title">lo-fi society</li>
-                            <li><a href="base.html">Homepage</a></li>
+            <div class ="logo">lo-fi society</div>
+            <nav class = "mobile_nav">
+                    <div id = "icon" onclick= "toggle()">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </div>
+                    <div class ="nav_links hide" id = "dropdown">
+                        <ul class = "layerer">
+                            <li><a href="index.html">Homepage</a></li>
                             <li><a href="pomodoro.html">Pomodoro</a></li>
                             <li><a href="mixtape.html">Mixtape</a></li>
                             <li><a href="visual.html">Visual Novel</a></li>
-                            <a href="javascript:void(0);" class="icon" onclick="show_links()">
-                                <i class="fa-solid fa-bars"></i>
-                            </a>
-                        </div>
+                        </ul>
                         
-                        
-                </ul>
-                
+
+                    </div>
+    
             </nav>
         </div>    
-            
         <script>
-            function show_links() {
-                var x = document.getElementById("my_links");
-                if (x.className === "mobile_nav") {
-                    x.className += " responsive";
+            function toggle() {
+              var x = document.getElementById("dropdown");
+                if (x.style.display === "none") {
+                    x.style.display = "flex";
                 } else {
-                    x.className = "mobile_nav";
-                }
+                x.style.display = "none";
+              }
             }
         </script>
+        
 
         <section id="about_section">
             <div class="about_container">
@@ -49,7 +50,7 @@
                 </div>
 
                 <div class="lofi_chan_item">
-                    <img src="Lofi-Chan_Sprite_joy.PNG" alt="lo-fi Chan">
+                    <img src="images\lofi_logo.PNG" alt="lo-fi Chan">
                 </div>
                 <div class="text_item_about">
                     <p>
@@ -71,9 +72,9 @@
                 </div>
                 <div class = "event_grid_items">
                     <button class = "left_button button" onclick="on_click(-1)">&#8249;</button>
-                    <img class = "slide_images" src = "karaoke.png">
-                    <img class = "slide_images" src = "lan.png">
-                    <img class = "slide_images" src = "movie_night.png">
+                    <img class = "slide_images" src = "images\karaoke.png">
+                    <img class = "slide_images" src = "images\lan.png">
+                    <img class = "slide_images" src = "images\movie_night.png">
                     <button class = "right_button button" onclick="on_click(1)">&#8250;</button>
                     
                 </div>
@@ -127,4 +128,5 @@
         </section>
 
     </body>
+    
 </html>
